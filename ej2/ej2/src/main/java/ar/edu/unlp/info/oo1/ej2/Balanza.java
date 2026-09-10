@@ -13,7 +13,7 @@ public class Balanza {
 	}
 	
 	public void agregarProducto(Producto p) {
-		this.productos.add(new Producto(p.getDescripcion(),p.getPeso(),p.getPrecioPorKilo()));
+		this.productos.add(p);
 	}
 
 	public int getCantidadDeProductos() {
