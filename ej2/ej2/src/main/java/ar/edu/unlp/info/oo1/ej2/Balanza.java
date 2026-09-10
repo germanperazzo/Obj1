@@ -2,7 +2,6 @@ package ar.edu.unlp.info.oo1.ej2;
 
 public class Balanza {
 	
-	private double pesoTotal;
 	private List<Producto> productos;
 	
 	public List<Producto> getProductos(){
@@ -10,12 +9,10 @@ public class Balanza {
 	}
 	
 	public void ponerEnCero()  {
-		this.pesoTotal =0;
 		this.productos.clear();
 	}
 	
 	public void agregarProducto(Producto p) {
-		this.pesoTotal += p.getPeso();
 		this.productos.add(new Producto(p.getDescripcion(),p.getPeso(),p.getPrecioPorKilo()));
 	}
 
@@ -25,13 +22,17 @@ public class Balanza {
 
 	public double getPrecioTotal() {
 		double precioTotal = 0;
-		for (Producto producto : this.productos ){
-			precioTotal = prodcuto.getPrecio();
+		for (Producto producto: this.productos ){
+			precioTotal += prodcuto.getPrecio();
 		}
 		return precioTotal;
 	}
 
 	public double getPesoTotal() {
+		double pesoTotal = 0;
+		for(Producto producto: this.productos){
+			pesoTotal += producto.getPeso();
+		}
 		return pesoTotal;
 	}
 		
