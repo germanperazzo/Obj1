@@ -37,7 +37,7 @@ public class Balanza {
 	}
 		
 	public Ticket emitirTicket() {
-		Ticket t= new Ticket(this.getCantidadDeProductos(), pesoTotal, precioTotal);
+		Ticket t= new Ticket(this.getCantidadDeProductos(), this.getPesoTotal(), this.getPrecioTotal());
 		return t;
 	}
 	
