@@ -28,25 +28,25 @@ public class ContratoDePlantaTest {
 
     @BeforeEach
     public void setUp() {
-        this.sueldoMensual = 100000.0;
-        this.montoConyuge = 5000.0;
-        this.montoHijos = 4000.0;
+        sueldoMensual = 100000.0;
+        montoConyuge = 5000.0;
+        montoHijos = 4000.0;
 
         // --- Inicialización de objetos para testAntiguedad ---
-        this.contrato9Anios = new ContratoDePlanta(LocalDate.now().minusYears(9), sueldoMensual, montoConyuge, montoHijos);
-        this.contrato10Anios = new ContratoDePlanta(LocalDate.now().minusYears(10), sueldoMensual, montoConyuge, montoHijos);
-        this.contrato11Anios = new ContratoDePlanta(LocalDate.now().minusYears(11), sueldoMensual, montoConyuge, montoHijos);
-        this.empleadoBase = new Empleado("Juan", LocalDate.of(1990, 1, 1), 0, false);
+        contrato9Anios = new ContratoDePlanta(LocalDate.now().minusYears(9), sueldoMensual, montoConyuge, montoHijos);
+        contrato10Anios = new ContratoDePlanta(LocalDate.now().minusYears(10), sueldoMensual, montoConyuge, montoHijos);
+        contrato11Anios = new ContratoDePlanta(LocalDate.now().minusYears(11), sueldoMensual, montoConyuge, montoHijos);
+        empleadoBase = new Empleado("Juan", LocalDate.of(1990, 1, 1), 0, false);
 
         // --- Inicialización de objetos para testConyuge ---
-        this.contratoConyuge = new ContratoDePlanta(LocalDate.now().minusYears(5), sueldoMensual, montoConyuge, montoHijos);
-        this.empleadoSinConyuge = new Empleado("Ana", LocalDate.of(1992, 3, 10), 0, false);
-        this.empleadoConConyuge = new Empleado("Carlos", LocalDate.of(1992, 3, 10), 0, true);
+        contratoConyuge = new ContratoDePlanta(LocalDate.now().minusYears(5), sueldoMensual, montoConyuge, montoHijos);
+        empleadoSinConyuge = new Empleado("Ana", LocalDate.of(1992, 3, 10), 0, false);
+        empleadoConConyuge = new Empleado("Carlos", LocalDate.of(1992, 3, 10), 0, true);
 
         // --- Inicialización de objetos para testHijos ---
-        this.contratoHijos = new ContratoDePlanta(LocalDate.now().minusYears(5), sueldoMensual, montoConyuge, montoHijos);
-        this.empleadoSinHijos = new Empleado("María", LocalDate.of(1995, 6, 20), 0, false);
-        this.empleadoConHijos = new Empleado("Sofía", LocalDate.of(1995, 6, 20), 2, false);
+        contratoHijos = new ContratoDePlanta(LocalDate.now().minusYears(5), sueldoMensual, montoConyuge, montoHijos);
+        empleadoSinHijos = new Empleado("María", LocalDate.of(1995, 6, 20), 0, false);
+        empleadoConHijos = new Empleado("Sofía", LocalDate.of(1995, 6, 20), 2, false);
     }
 
     @Test
